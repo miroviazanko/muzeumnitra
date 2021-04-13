@@ -1,0 +1,247 @@
+$header-height-mobile: 92px;
+$header-height-desktop: 92px;
+$header-height-fs-big: 126px;
+
+body {
+	padding-top: $header-height-mobile;
+}
+
+
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 17;
+	width: 100%;
+	min-height: 92px;
+	padding-top: $spacer/2;
+	background: $black;
+	color: $white;
+	a {
+		color: $white;
+		font-weight: 700;
+	}
+}
+.logo-wrap {
+	padding-bottom: $spacer/2;
+}
+.top-nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		display: none;
+	}
+}
+
+#topNav {
+	&.is-active {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		display: flex !important;
+		width: 100%;
+		background: rgba(0,0,0,.8);
+		overflow: hidden;
+	}
+}
+.mobnav-wrap {
+	display: flex;
+	flex: 0 0 200%;
+	transition: transform .3s ease;
+	&.is-opened {
+		transform: translateX(-50%);
+	}
+	li {
+		position: relative;
+		width: 200px;
+		margin: $spacer/4 0;
+		font-size: $font-size-lg;
+	}
+}
+.mainnav-wrap,
+.subnav-wrap {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - #{$header-height-mobile});
+	padding: $spacer;
+}
+.subnav-wrap {
+	position: relative;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+}
+.submenu-toggler {
+	position: absolute;
+	top: 0;
+	right: -50px;
+	display: inline-block;
+	width: 50px;
+	height: 100%;
+	background: url(../../../images/arr-white-right-short.svg) no-repeat center;
+}
+.submenu-back {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 5%;
+	height: 90%;
+	padding: $spacer/3;
+	border-right: 1px solid $white;
+	text-transform: uppercase;
+}
+
+.hside-wrap {
+	a {
+		color: $secondary;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.langs-wrap {
+	width: 120%;
+	word-break: break-all;
+	white-space: nowrap;
+}
+
+.fschanger-wrap {
+	margin-bottom: $spacer/2;
+}
+
+@include media-breakpoint-up(xl) {
+	body {
+		padding-top: $header-height-desktop;
+	}
+
+	.logo-wrap {
+		width: 100px;
+	}
+	.mobnav-wrap {
+		flex: 0 0 100%;
+	}
+	.mainnav-wrap,
+	.subnav-wrap {
+		display: flex;
+		justify-content: center;
+		height: auto;
+		padding: 0;
+	}
+	.subnav-wrap {
+		display: none;
+	}
+
+	.top-nav {
+		flex-direction: row;
+		a {
+			display: inline-block;
+			color: $white;
+			text-decoration: none;
+			&:hover {
+				color: $secondary;
+			}
+		}
+		> li {
+			a {
+				padding: 0 $spacer/2 $spacer/2;
+			}
+			&:hover {
+				> a {
+					color: $secondary;
+				}
+				> ul {
+					display: flex;
+				}
+			}
+			> ul {
+				position: absolute;
+				left: 0;
+				top: 100%;
+				flex-wrap: wrap;
+				display: none;
+				width: 100%;
+				padding: $spacer $spacer/2 $spacer/2;
+				background: rgba(0,0,0,.8);
+				li {
+					flex: 0 0 auto;
+	 				width: 25%;
+					padding-left: $spacer;
+					padding-right: $spacer;
+					margin-bottom: $spacer;
+					a {
+						display: block;
+						padding: $spacer/2 $spacer*2 $spacer/2 $spacer/2;
+						border-bottom: 2px solid $white;
+						line-height: 2;
+						background: url(../../../images/arr-white-right.svg) no-repeat right $spacer/2 center;
+						&:hover {
+							border-color: $secondary;
+							background-image: url(../../../images/arr-grey-right.svg);
+						}
+					}
+				}
+			}
+		}
+		li {
+			position: static;
+			width: auto;
+			margin: 0;
+			font-size: $font-size-base;
+			&.active {
+				> a {
+					border-bottom: 2px solid $white;
+				}
+			}
+		}
+		.submenu-toggler,
+		.submenu-back {
+			display: none;
+		}
+	}
+}
+
+/* HAMBURGER MENU TOGGLER */
+.hamburger-wrap {
+	position: absolute;
+	right: $spacer;
+	top: $spacer/4;
+	width: auto;
+}
+.nav-toggler {
+	font-weight: 400;
+	svg {
+		line {
+			transition: all .2s ease-in;
+			stroke: $white;
+		}
+	}
+	&.is-active {
+		.l1 {
+			transform: translateX(5px) rotate(45deg);
+		}
+		.l2 {
+			transform: translateX(-9px) translateY(8px) rotate(-45deg);
+		}
+		.l3 {
+			transform: translateX(-10px);
+			opacity: 0;
+		}
+	}
+	&:hover {
+		color: $white;
+	}
+}

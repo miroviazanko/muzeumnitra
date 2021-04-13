@@ -1,0 +1,39 @@
+// glidejs
+.glide__slide {
+	max-width: 500px;
+}
+.glide__track {
+	position: relative;
+	z-index: 3;
+}
+.glide__arrows {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: -5px;
+}
+.glide__arrow {
+	position: relative;
+	border: 0;
+	background: 0;
+}
+.glide__arrow--left {
+	left: -$grid-gutter-width / 2;
+}
+.glide__arrow--right {
+	right: -$grid-gutter-width / 2;
+}
+
+@include media-breakpoint-down(lg) {
+	.glide__slides {
+		overflow: auto;
+		touch-action: auto;
+	}
+	.glide__slide {
+		max-width: 280px;
+	}
+}

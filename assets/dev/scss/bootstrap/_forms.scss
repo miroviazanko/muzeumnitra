@@ -1,0 +1,49 @@
+@import "forms/labels";
+@import "forms/form-text";
+@import "forms/form-control";
+@import "forms/form-select";
+@import "forms/form-check";
+@import "forms/form-range";
+@import "forms/floating-labels";
+@import "forms/input-group";
+@import "forms/validation";
+
+.wpcf7-form {
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="date"],
+	select {
+		max-width: 320px;
+	}
+	textarea {
+		width: 100%;
+	}
+	br {
+		display: none;
+	}
+	label {
+		font-weight: 700;
+	}
+	.required {
+		color: $red;
+	}
+	.wpcf7-list-item {
+		margin: 0;
+	}
+	.wpcf7-not-valid {
+		border-color: $red-300 !important;
+		background: $red-100 !important;
+	}
+}
+.wpcf7 {
+	form.wpcf7-form {
+		.wpcf7-response-output {
+			padding: $spacer;
+			margin: 0;
+			border-color: $gray-500;
+			background: $gray-300;
+			font-size: $font-size-lg;
+		}
+	}
+}

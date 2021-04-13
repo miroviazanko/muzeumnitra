@@ -1,0 +1,44 @@
+{
+    "key": "group_604b5117b1771",
+    "title": "Mapa",
+    "fields": [
+        {
+            "key": "field_604b512366d99",
+            "label": "Poloha expozitúry",
+            "name": "poloha_expozitury",
+            "type": "text",
+            "instructions": "1. Otvorte si Google mapy.\r\n2.Určte miesto kde sa nachádza expozitúra.\r\n3. Prvým tlačidlom myši sa Vám zobrazia ako prvá položka, súradnice daného miesta v tvare  ( 48.38276, 18.39679 ), ktoré sem skopírujete",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "expozitury"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1616076951
+}

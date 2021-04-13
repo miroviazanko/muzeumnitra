@@ -1,0 +1,162 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Múzeum Nitra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-11 11:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.1; wp-5.6.2\n"
+"X-Domain: mnsk"
+
+#: inc/mnsk-widgets.php:15 inc/mnsk-widgets.php:30
+msgid "Add widgets here to appear in your sidebar."
+msgstr ""
+
+#: template-parts/content-actual-vystavy.php:4
+msgid "Aktuálne výstavy"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:38
+msgid "Blog-menu"
+msgstr ""
+
+#: archive-vystavy.php:47
+msgid "Detail výstavy"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:46
+msgid "Expozitury-menu"
+msgstr ""
+
+#: footer.php:14
+msgid "facebook"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:39
+msgid "Footer-1a"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:40
+msgid "Footer-1b"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:41
+msgid "Footer-2a"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:42
+msgid "Footer-2b"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:43
+msgid "Footer-4a"
+msgstr ""
+
+#: inc/mnsk-widgets.php:13
+msgid "Footer-nav1"
+msgstr ""
+
+#: inc/mnsk-widgets.php:28
+msgid "Footer-nav2"
+msgstr ""
+
+#. URI of the theme
+#. Author URI of the theme
+msgid "https://www.muzeumnitra.sk"
+msgstr ""
+
+#: footer.php:15
+msgid "Ikonka odkazujúca na facebook Ponitrinakého múzea"
+msgstr ""
+
+#: footer.php:27
+msgid "Ikonka odkazujúca na instagram Ponitrinakého múzea"
+msgstr ""
+
+#: footer.php:26
+msgid "instagram"
+msgstr ""
+
+#: inc/mnsk-specific-fn.php:6
+msgid "mnsk Nastavenia"
+msgstr ""
+
+#: inc/mnsk-specific-fn.php:5
+msgid "mnsk nastavenia web stránky"
+msgstr ""
+
+#. Name of the theme
+#. Description of the theme
+#. Author of the theme
+msgid "Múzeum Nitra"
+msgstr ""
+
+#: footer.php:53
+msgid "Nájdete nás"
+msgstr ""
+
+#: header.php:24 footer.php:8 footer.php:233
+msgid "Ponitrianske múzeum v Nitre"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:37
+msgid "Primary"
+msgstr ""
+
+#: footer.php:208
+msgid "Projekty"
+msgstr ""
+
+#: inc/mnsk-specific-fn.php:13 inc/mnsk-specific-fn.php:14
+msgid "Pätička"
+msgstr ""
+
+#: footer.php:167
+msgid "Služby"
+msgstr ""
+
+#: header.php:59
+msgid "späť"
+msgstr ""
+
+#: single.php:45
+msgid "Späť na blog"
+msgstr ""
+
+#: footer.php:225
+msgid "späť na vrch"
+msgstr ""
+
+#: header.php:58
+msgid "tlačidlo späť"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:44
+msgid "Vystavy-menu"
+msgstr ""
+
+#: template-parts/content-actual-zbierky.php:14
+msgid "Zbierky"
+msgstr ""
+
+#: inc/mnsk-theme-setup.php:45
+msgid "Zbierky-menu"
+msgstr ""
+
+#: template-parts/content-gallery.php:25
+#: template-parts/content-actual-vystavy.php:66
+msgid "šípka vpravo"
+msgstr ""
+
+#: template-parts/content-gallery.php:21
+#: template-parts/content-actual-vystavy.php:62
+msgid "šípka vľavo"
+msgstr ""

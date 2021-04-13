@@ -1,0 +1,186 @@
+//
+// Base styles
+//
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $accordion-button-padding-y $accordion-button-padding-x;
+  @include font-size($font-size-base);
+  color: $accordion-button-color;
+  text-align: left; // Reset button style
+  background-color: $accordion-button-bg;
+  border: $accordion-border-width solid $accordion-border-color;
+  @include border-radius(0);
+  overflow-anchor: none;
+  @include transition($accordion-transition);
+
+  &.collapsed {
+    border-bottom-width: 0;
+  }
+
+  &:not(.collapsed) {
+    color: $accordion-button-active-color;
+    background-color: $accordion-button-active-bg;
+
+    &::after {
+      background-image: escape-svg($accordion-button-active-icon);
+      transform: $accordion-icon-transform;
+    }
+  }
+
+  // Accordion icon
+  &::after {
+    flex-shrink: 0;
+    width: $accordion-icon-width;
+    height: $accordion-icon-width;
+    margin-left: auto;
+    content: "";
+    background-image: escape-svg($accordion-button-icon);
+    background-repeat: no-repeat;
+    background-size: $accordion-icon-width;
+    @include transition($accordion-icon-transition);
+  }
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:focus {
+    z-index: 3;
+    border-color: $accordion-button-focus-border-color;
+    outline: 0;
+    box-shadow: $accordion-button-focus-box-shadow;
+  }
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  &:first-of-type {
+    .accordion-button {
+      @include border-top-radius($accordion-border-radius);
+    }
+  }
+
+  &:last-of-type {
+    .accordion-button {
+      // Only set a border-radius on the last item if the accordion is collapsed
+      &.collapsed {
+        border-bottom-width: $accordion-border-width;
+        @include border-bottom-radius($accordion-border-radius);
+      }
+    }
+
+    .accordion-collapse {
+      border-bottom-width: $accordion-border-width;
+      @include border-bottom-radius($accordion-border-radius);
+    }
+  }
+}
+
+.accordion-collapse {
+  border: solid $accordion-border-color;
+  border-width: 0 $accordion-border-width;
+}
+
+.accordion-body {
+  padding: $accordion-body-padding-y $accordion-body-padding-x;
+}
+
+
+// Flush accordion items
+//
+// Remove borders and border-radius to keep accordion items edge-to-edge.
+
+.accordion-flush {
+  .accordion-button {
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+  }
+
+  .accordion-collapse {
+    border-width: 0;
+  }
+
+  .accordion-item {
+    &:first-of-type {
+      .accordion-button {
+        border-top-width: 0;
+        @include border-top-radius(0);
+      }
+    }
+
+    &:last-of-type {
+      .accordion-button.collapsed {
+        border-bottom-width: 0;
+        @include border-bottom-radius(0);
+      }
+    }
+  }
+}
+
+// accordion archive
+.accordion-archive {
+  .accordion-item {
+    border-bottom: 1px solid $black;
+  }
+  .accordion-button {
+    display: flex;
+    padding-left: 0;
+    padding-top: $spacer/2;
+    padding-bottom: $spacer/2;
+    border: 0;
+    background: 0;
+    color: $black;
+  }
+  .accordion-img {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    margin: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .accordion-meta {
+    display: flex;
+    flex-direction: column;
+    padding: $grid-gutter-width/4 $grid-gutter-width/4 $grid-gutter-width/4 $grid-gutter-width/2;
+  }
+  .accordion-collapse {
+    border: 0;
+  }
+  .accordion-body {
+    padding: $spacer/2 $spacer/2 $spacer calc(150px + #{$grid-gutter-width/2});
+  }
+  @include media-breakpoint-down(md) {
+    & {
+      margin-left: -$grid-gutter-width/4;
+      margin-right: -$grid-gutter-width/4;
+    }
+    .accordion-img {
+      width: 80px;
+      min-width: 80px;
+      height: 80px;
+    }
+    .accordion-body {
+      padding: $spacer/2 0 $spacer 0;
+    } 
+    .accordion-meta {
+      .h2 {
+        font-size: $font-size-base;
+      }
+    }
+    .meta-desc {
+      font-size: $font-size-sm;
+    }
+  }
+}

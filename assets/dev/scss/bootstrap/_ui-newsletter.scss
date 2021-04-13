@@ -1,0 +1,49 @@
+// newsletter
+.mc4wp-form-fields,
+.mc4wp-response {
+	display: flex;
+	min-width: 100%;
+}
+
+.mc4wp-success {
+	padding: $spacer/2;
+	border: 1px solid $gray-500;
+	margin-top: $spacer/4;
+	color: $black;
+	background: $gray-200;
+}
+
+.newsletter-wrap {
+	form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	input,
+	button {
+		padding: $grid-gutter-width/4 $grid-gutter-width/2;
+		border: 0;
+	}
+	input[type="text"],
+	input[type="email"] {
+		flex-grow: 1;
+		background: $gray-600;
+		color: $white;
+	}
+	input[type="submit"],
+	button[type="submit"] {
+		background: 0;
+		color: $gray-400;
+	}
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		color: $white;
+	  }
+	  ::-moz-placeholder { /* Firefox 19+ */
+		color: $white;
+	  }
+	  :-ms-input-placeholder { /* IE 10+ */
+		color: $white;
+	  }
+	  :-moz-placeholder { /* Firefox 18- */
+		color: $white;
+	  }
+}

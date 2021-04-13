@@ -1,0 +1,12 @@
+$short-msg-height-desktop: 85px;
+
+.short-msg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $white;
+	font-weight: 700;
+	a {
+		color: $white;
+	}
+}

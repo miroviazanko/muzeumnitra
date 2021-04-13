@@ -1,0 +1,110 @@
+// button
+.wp-block-button__link {
+	background-color: $black;
+	color: $white;
+	text-decoration: none;
+}
+.wp-block-button {
+	margin-bottom: $spacer;
+	&.is-style-outline {
+		.wp-block-button__link {
+			border-bottom-color: $black;
+			background-color: transparent;
+			background-image: url(../../../images/arr-black-right.svg);
+			color: $black;
+			&::before {
+				background: 0;
+				border-bottom: 2px solid $black;
+			}
+		}		
+	}
+}
+
+// tables 
+.wp-block-table {
+	margin-bottom: $spacer;
+	table {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+// blockquote
+.wp-block-quote {
+	margin-bottom: $spacer;
+	p {
+		margin-bottom: 0;
+		font-size: $font-size-lg;
+	}
+	cite {
+		display: block;
+		padding: $grid-gutter-width/6 0;
+		font-style: normal;
+		font-size: $font-size-sm;
+		color: $gray-600;
+		&:before {
+			content: "— ";
+		}
+	}
+	&.is-style-large {
+		p {
+			font-size: $h2-font-size;
+			line-height: $h2-font-size;
+		}
+		cite {
+			font-size: $font-size-base;
+		}
+	}
+}
+
+// file download
+.wp-block-file {
+	margin-bottom: $spacer;
+}
+.wp-block-file__button {
+	display: inline-flex;
+	padding: $grid-gutter-width/6 $grid-gutter-width/4;
+	margin-left: $grid-gutter-width/4;
+	background: $black;
+	color: $white;
+	text-decoration: none;
+}
+
+// wp media
+.wp-block-media-text {
+	display: flex;
+	min-height: 200px;
+	margin-bottom: $spacer;
+	background: $gray-300;
+	figure {
+		margin: 0;
+	}
+}
+.wp-block-media-text__media,
+.wp-block-media-text__content {
+	flex: 1 0 0;
+}
+.wp-block-media-text__media {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.wp-block-media-text__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: $spacer;
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@include media-breakpoint-down(md) {
+
+	.wp-block-media-text {
+		flex-direction: column;
+	}
+
+}

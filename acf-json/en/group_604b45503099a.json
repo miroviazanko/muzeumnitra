@@ -1,0 +1,40 @@
+{
+    "key": "group_604b45503099a",
+    "title": "Farba pozadia zbierky",
+    "fields": [
+        {
+            "key": "field_604b45567cde7",
+            "label": "Farba pozadia zbierky",
+            "name": "farba_pozadia_zbierky",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "wpml_cf_preferences": 2
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "zbierky"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1616076939
+}
